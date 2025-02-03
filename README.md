@@ -41,17 +41,17 @@ onr-app/
 └── .env                    # Variables de entorno
 
 # Instalación
-1-) realizar un git clone https://github.com/macs1407/onr.git
-2-) abrir el proyecto con su IDE de preferencia
-3-) desde la terminal integrada de su IDE ejecutar el comando de instalacion de dependencia npm i
-4-) para subir el proyecto ejecutar npm run dev
-5-) dentro del fuente encontrara el archivo Booking API.postman_collection.json importarlo desde Postman
+1. realizar un git clone https://github.com/macs1407/onr.git
+2. abrir el proyecto con su IDE de preferencia
+3. desde la terminal integrada de su IDE ejecutar el comando de instalacion de dependencia npm i
+4. para subir el proyecto ejecutar npm run dev
+5. dentro del fuente encontrara el archivo Booking API.postman_collection.json importarlo desde Postman
 
 # Pruebas
-1-) Se deben crear el CRUD de las anteriores colecciones = cada coleccion tiene su crud dentro de la coleccion de postman
-2-) Se debe agregar un servicio a cada CRUD para obtener los datos filtrados por asociación = dentro de cada folder encontrar un endPoint terminado con "by association"
-3-) Se requiere un servicio que obtenga los datos de los usuarios y sus unidades de ambas
+1. Se deben crear el CRUD de las anteriores colecciones = cada coleccion tiene su crud dentro de la coleccion de postman
+2. Se debe agregar un servicio a cada CRUD para obtener los datos filtrados por asociación = dentro de cada folder encontrar un endPoint terminado con "by association"
+3. Se requiere un servicio que obtenga los datos de los usuarios y sus unidades de ambas
 bases de datos = el endPoint a ejecutar es http://localhost:4090/api/users/units
-4-) El usuario A de la asociación X, almacenado en la base de datos postgresql, desea
+4. El usuario A de la asociación X, almacenado en la base de datos postgresql, desea
 acceder a la plataforma para realizar la reserva (booking) de un amenity Y en la
 asociación X. Cree los servicios para dicho flujo = el endPoint a ejecutar es http://localhost:4090/api/scenary/:id
