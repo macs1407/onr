@@ -14,30 +14,55 @@ Este proyecto gestiona comunidades residenciales. Contiene las rutas, modelos y 
 
 # Estructura
 onr-app/
+
 ├── config/
+
 │   ├── database.js         # Configuración de las bases de datos (MongoDB y PostgreSQL)
+
 │   ├── mongoose.js         # Configuración de Mongoose para MongoDB
+
 │   └── sequelize.js        # Configuración de Sequelize para PostgreSQL
+
 ├── controllers/
+
 │   ├── associationController.js
+
 │   ├── bookingController.js
+
 │   ├── amenityController.js
+
 │   ├── unitController.js
+
 │   └── userController.js
+
 ├── routes/
+
 │   ├── associationRoutes.js
+
 │   ├── bookingRoutes.js
+
 │   ├── amenityRoutes.js
+
 │   ├── unitRoutes.js
+
 │   └── userRoutes.js
+
 ├── services/
+
 │   ├── associationService.js
+
 │   ├── bookingService.js
+
 │   ├── amenityService.js
+
 │   ├── unitService.js
+
 │   └── userService.js
+
 ├── app.js                  # Archivo principal de la aplicación Express.js
+
 ├── package.json            # Dependencias y scripts
+
 └── .env                    # Variables de entorno
 
 # Instalación
