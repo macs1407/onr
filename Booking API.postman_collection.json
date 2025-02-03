@@ -1,0 +1,848 @@
+{
+	"info": {
+		"_postman_id": "c1239b27-3369-4c98-bce0-acd6986bc198",
+		"name": "Booking API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "944627"
+	},
+	"item": [
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "Create Booking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-03-10T10:00:00Z\",\r\n    \"timeStart\": \"12:00 AM\",\r\n    \"timeEnd\": \"6:00 PM\",\r\n    \"amenity\": \"0c613cb6-44bb-4e27-b053-1caa17e8cdcc\",\r\n    \"user\": \"0e610efa-88c1-4450-a06a-60fc7cf82c54\",\r\n    \"association\": \"ca92ad30-b8f8-4c26-9db3-240466b520fe\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:4090/api/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Bookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4090/api/bookings",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4090/api/bookings/a04a1ce2-2a52-4635-a6e4-f68f936f199c",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"bookings",
+								"a04a1ce2-2a52-4635-a6e4-f68f936f199c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Booking by association",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4090/api/bookings/association/ca92ad30-b8f8-4c26-9db3-240466b520fe",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"bookings",
+								"association",
+								"ca92ad30-b8f8-4c26-9db3-240466b520fe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Booking",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2025-02-10T10:00:00.000Z\",\r\n    \"timeStart\": \"10:00 AM\",\r\n    \"timeEnd\": \"4:00 PM\",\r\n    \"user\": \"0e610efa-88c1-4450-a06a-60fc7cf82c54\",\r\n    \"amenity\": \"0c613cb6-44bb-4e27-b053-1caa17e8cdcc\",\r\n    \"association\": \"ca92ad30-b8f8-4c26-9db3-240466b520fe\"\r\n}"
+						},
+						"url": {
+							"raw": "localhost:4090/api/bookings/a04a1ce2-2a52-4635-a6e4-f68f936f199c",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"bookings",
+								"a04a1ce2-2a52-4635-a6e4-f68f936f199c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Booking",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4090/api/bookings/86339c14-be75-4516-8c6d-bf437a75f44e",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"bookings",
+								"86339c14-be75-4516-8c6d-bf437a75f44e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"names\": \"mati\",\r\n    \"lastNames\": \"cucunuba\",\r\n    \"email\": \"cucumati@gmail.com\",\r\n    \"password\": \"matias\",\r\n    \"associations\": [\"17e82a61-b173-42d4-99b7-68048c5e3230\"],\r\n    \"units\": [\"8a0fec46-cc9b-4f9d-8c43-7d2ddda65ed8\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/users/0e610efa-88c1-4450-a06a-60fc7cf82c54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users",
+								"0e610efa-88c1-4450-a06a-60fc7cf82c54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by association",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/users/association/cbecc692-b2ef-451f-9717-bb2e64364ce1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users",
+								"association",
+								"cbecc692-b2ef-451f-9717-bb2e64364ce1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/users/cedfc63b-6b68-47ab-b732-d486a4b78a98",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users",
+								"cedfc63b-6b68-47ab-b732-d486a4b78a98"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"names\": \"Sandra patricia\",\r\n    \"lastNames\": \"Salazar\",\r\n    \"email\": \"vaiana@gmail.com\",\r\n    \"password\": \"matias\",\r\n    \"associations\": [\"ca92ad30-b8f8-4c26-9db3-240466b520fe\", \"cbecc692-b2ef-451f-9717-bb2e64364ce1\"],\r\n    \"units\": [\"2d18be1e-6325-4807-a6ed-b90b49b8d33e\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/users/0e610efa-88c1-4450-a06a-60fc7cf82c54",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users",
+								"0e610efa-88c1-4450-a06a-60fc7cf82c54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all Users and units",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/users/units",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"users",
+								"units"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Association",
+			"item": [
+				{
+					"name": "Create association",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Santa rosa de cabal dos\",\r\n    \"address\": \"carrera 5 #14a 21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/associations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"associations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get associations",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/associations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"associations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update association",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pereira\",\r\n    \"address\": \"Carrera 8 #80 24\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/associations/485f880e-c041-4c97-9625-379d072a73fd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"associations",
+								"485f880e-c041-4c97-9625-379d072a73fd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get association by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/associations/b8450362-f524-4e09-81d3-6861aaec9026",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"associations",
+								"b8450362-f524-4e09-81d3-6861aaec9026"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete association by Id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/associations/485f880e-c041-4c97-9625-379d072a73fd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"associations",
+								"485f880e-c041-4c97-9625-379d072a73fd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Unit",
+			"item": [
+				{
+					"name": "Create unit",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Unidad en venta pereira\",\r\n    \"associationId\": \"17e82a61-b173-42d4-99b7-68048c5e3230\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/units",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update unit",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nueva unidad\",\r\n    \"association\": \"485f880e-c041-4c97-9625-379d072a73fd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/units/ee1b9658-5bee-438b-bbb3-c34fe2ad557c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"units",
+								"ee1b9658-5bee-438b-bbb3-c34fe2ad557c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get units",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/units",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"units"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete unit",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/units/e14b2e67-48de-4e36-82af-bb60f84df704",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"units",
+								"e14b2e67-48de-4e36-82af-bb60f84df704"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get unit by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/units/73ad684a-5033-4ee6-addd-990cb48c376c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"units",
+								"73ad684a-5033-4ee6-addd-990cb48c376c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get unit by association",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/units/association/17e82a61-b173-42d4-99b7-68048c5e3230",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"units",
+								"association",
+								"17e82a61-b173-42d4-99b7-68048c5e3230"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Amenity",
+			"item": [
+				{
+					"name": "Create amenity",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"separacion 2\",\r\n    \"description\": \"prueba 2\",\r\n    \"bookable\": true,\r\n    \"openingTime\": \"2025-02-11T10:00:00Z\",\r\n    \"closingTime\": \"2025-02-15T10:00:00Z\",\r\n    \"association\": \"ca92ad30-b8f8-4c26-9db3-240466b520fe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/amenities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"amenities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update amenity",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"separacion de prueba 1\",\r\n    \"description\": \"pruebas\",\r\n    \"bookable\": false,\r\n    \"openingTime\": \"2025-02-11T10:00:00Z\",\r\n    \"closingTime\": \"2025-02-15T10:00:00Z\",\r\n    \"association\": \"ca92ad30-b8f8-4c26-9db3-240466b520fe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4090/api/amenities/254fd1bb-6521-4df8-a795-1f1896642336",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"amenities",
+								"254fd1bb-6521-4df8-a795-1f1896642336"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get amenitys",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/amenities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"amenities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete amenity",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/amenities/254fd1bb-6521-4df8-a795-1f1896642336",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"amenities",
+								"254fd1bb-6521-4df8-a795-1f1896642336"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get amenity by id",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/amenities/254fd1bb-6521-4df8-a795-1f1896642336",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"amenities",
+								"254fd1bb-6521-4df8-a795-1f1896642336"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get amenity by association",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4090/api/amenities/association/ca92ad30-b8f8-4c26-9db3-240466b520fe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4090",
+							"path": [
+								"api",
+								"amenities",
+								"association",
+								"ca92ad30-b8f8-4c26-9db3-240466b520fe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Scenary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2025-03-10T10:00:00Z\",\r\n    \"timeStart\": \"12:00 AM\",\r\n    \"timeEnd\": \"6:00 PM\",\r\n    \"amenity\": \"0c613cb6-44bb-4e27-b053-1caa17e8cdcc\",\r\n    \"association\": \"ca92ad30-b8f8-4c26-9db3-240466b520fe\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4090/api/scenary/9363b1dc-c527-404b-b754-77560892b187",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4090",
+					"path": [
+						"api",
+						"scenary",
+						"9363b1dc-c527-404b-b754-77560892b187"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
